@@ -16,18 +16,19 @@ var ItemList: [String] = []
 
 
 struct Stuff: View {
+    @State var stuff: StuffObject
     var body: some View {
     VStack(alignment: .leading){
         HStack{
             icon()
-            Text("Stuff")
+            Text(stuff.name)
                 .font(.title)
         }
         HStack{
-            Text("desc")
+            Text(stuff.desc)
                 .font(.subheadline)
             Spacer()
-            Text("location")
+            Text(stuff.location)
                 .font(.subheadline)
         }
     }
@@ -40,7 +41,8 @@ struct Stuff: View {
 
 struct Stuff_Previews: PreviewProvider {
     static var previews: some View {
-        jsonViewer()
+//        jsonViewer()
+        Stuff(stuff: stuffArray[0])
     }
 }
 
@@ -75,9 +77,9 @@ struct Item {
 
 
 
-struct jsonViewer : View {
-    var body: some View {
-        Text(stuffArray[0].jsonViewer())
-    }
-}
+//struct jsonViewer : View {
+//    var body: some View {
+//        Text(stuffArray[0].jsonViewer())
+//    }
+//}
 

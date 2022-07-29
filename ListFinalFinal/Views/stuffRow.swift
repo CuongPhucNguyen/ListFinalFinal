@@ -7,11 +7,17 @@
 import SwiftUI
 
 struct stuffRow: View {
-    @State var stuff: StuffObject
+    @State var stuff: [StuffObject]
     
     
     var body: some View {
-        Text("Wassup")
+        VStack{
+            Stuff(stuff: stuff[0])
+            Stuff(stuff: stuff[1])
+            Stuff(stuff: stuff[2])
+            Stuff(stuff: stuff[3])
+        }
+        
     }
 }
 
@@ -19,7 +25,7 @@ struct stuffRow: View {
 struct stuffRow_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            stuffRow(stuff: stuffArray[0])
+            stuffRow(stuff: stuffArray)
         }
     }
 }
