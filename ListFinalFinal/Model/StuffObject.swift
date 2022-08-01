@@ -10,7 +10,7 @@ import SwiftUI
 
 
 
-struct StuffObject: Codable, Identifiable {
+struct StuffObject:Hashable, Codable, Identifiable {
     let id: Int
     let name: String
     let desc: String

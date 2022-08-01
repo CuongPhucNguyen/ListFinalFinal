@@ -11,7 +11,7 @@ import SwiftUI
 struct ListFinalFinalApp: App {
     var body: some Scene {
         WindowGroup {
-            stuffRow(stuff:stuffArray)
+            welcomePage()
         }
     }
 }

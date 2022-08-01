@@ -8,31 +8,32 @@
 import SwiftUI
 
 struct selectedView: View {
+    @State var stuff: StuffObject
     var body: some View {
         VStack(alignment: .center){
             selectedImage()
             HStack{
-                Text("Stuff")
+                Text(stuff.name)
                     .font(.title)
                 Spacer()
             }
                 
             HStack{
-                Text("desc")
+                Text(stuff.desc)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                 Spacer()
-                Text("location")
+                Text(stuff.location)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
             Divider()
             HStack{
-                Text("About Stuff")
+                Text("About \(stuff.name)")
                     .font(.title2)
                 Spacer()
             }
-            Text("Detailed desc")
+            Text(stuff.detailedDesc)
                 .font(.body)
                 .frame(width:315,alignment:.leading)
             
@@ -45,7 +46,7 @@ struct selectedView: View {
 
 struct selectedView_Previews: PreviewProvider {
     static var previews: some View {
-        selectedView()
+        selectedView(stuff:stuffArray[0])
     }
 }
 
