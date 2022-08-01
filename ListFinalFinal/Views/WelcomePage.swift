@@ -26,15 +26,18 @@ struct welcomePage: View {
                     Image("rmit-logo")
                         .opacity(rectOpacity)
                 )
-                .opacity(<#T##Double#>)
+                .opacity(listOpacity)
             Image("rmit-logo")
                 .opacity(rectOpacity)
+                .on{
+                    listOpacity = 1
+                }
         }
         .onAppear{
             withAnimation(.easeIn(duration: 1)){
                 rectOpacity += 1.0
-                listOpacity += 1.0
             }
+            
         }
                 
     }
