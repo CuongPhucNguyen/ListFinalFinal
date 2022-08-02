@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct selectedView: View {
+    @EnvironmentObject var data: modelData
     @State var stuff: StuffObject
+    
+    var stuffIndex: Int {
+            data.stuffArray.firstIndex(where: { $0.id == stuff.id })!
+        }
+    
     var body: some View {
         VStack(alignment: .center){
             selectedImage(icon:stuff.icon)
+            
             HStack{
                 Text(stuff.name)
                     .font(.title)
                 Spacer()
+                favButton(favBool: $data.stuffArray[stuffIndex].isFavorite)
+                
             }
             .padding(.bottom, 10)
             .padding(.leading, 5)
@@ -51,7 +60,7 @@ struct selectedView: View {
 
 struct selectedView_Previews: PreviewProvider {
     static var previews: some View {
-        selectedView(stuff:stuffArray[0])
+        selectedView(stuff:modelData().stuffArray[0])
     }
 }
 

@@ -17,7 +17,7 @@ struct Stuff: View {
     @State var stuff: StuffObject
     @State var delayIn: Double
     @State var moveIn: Double = UIScreen.main.bounds.width
-    @State var appearOnce: Bool = false
+    @State var reload: Bool = false
     var body: some View {
             Group {
                 ZStack{
@@ -47,12 +47,11 @@ struct Stuff: View {
             }
             .offset(x:moveIn,y:0)
             .onAppear{
-                if (!appearOnce){
-                    appearOnce.toggle()
+                if (moveIn != 0){
                     withAnimation(.easeOut(duration: 0.5).delay(delayIn/10)){
                     moveIn -= UIScreen.main.bounds.width
-                }
-                
+                    }
+                    reload = !reload
             }
         }
         
@@ -66,8 +65,8 @@ struct Stuff: View {
 struct Stuff_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            Stuff(stuff: stuffArray[0],delayIn: 1)
-            Stuff(stuff: stuffArray[1],delayIn: 2)
+            Stuff(stuff: modelData().stuffArray[0],delayIn: 1)
+            Stuff(stuff: modelData().stuffArray[1],delayIn: 2)
         }
         
     }

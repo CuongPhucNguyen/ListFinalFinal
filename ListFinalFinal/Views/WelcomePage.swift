@@ -37,7 +37,7 @@ struct welcomePage: View {
         ZStack{
             
             
-            stuffList(delayIntro: 3.5)
+            stuffList(delayIntro: 3.5).environmentObject(modelData())
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             Group{
                 Color(red: 0.03, green: 0.03, blue: 0.35)
