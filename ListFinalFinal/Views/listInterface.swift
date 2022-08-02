@@ -17,7 +17,6 @@ struct Stuff: View {
     @State var stuff: StuffObject
     @State var delayIn: Double
     @State var moveIn: Double = UIScreen.main.bounds.width
-    @State var reload: Bool = false
     var body: some View {
             Group {
                 ZStack{
@@ -51,7 +50,6 @@ struct Stuff: View {
                     withAnimation(.easeOut(duration: 0.5).delay(delayIn/10)){
                     moveIn -= UIScreen.main.bounds.width
                     }
-                    reload = !reload
             }
         }
         

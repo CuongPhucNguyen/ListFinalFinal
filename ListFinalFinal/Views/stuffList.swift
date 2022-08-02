@@ -10,17 +10,21 @@ struct stuffList: View {
     @EnvironmentObject var data: modelData
     @State var delayIntro: Double
     @State var showFav: Bool = false
+    @State var reload: Bool = false
     var filteredStuff: [StuffObject] {
         data.stuffArray.filter { stuff in
-                (!showFav || stuff.isFavorite)
+                ((!showFav || stuff.isFavorite) && !reload)
             }
     }
-    
     
     var body: some View {
         NavigationView{
             List{
                 Toggle("Favorites only",isOn: $showFav)
+                    .onChange(of: showFav) { newValue in
+                        reload = !reload
+                        reload = !reload
+                    }
                 ForEach(filteredStuff){ stuff in
                     NavigationLink{
                         selectedView(stuff:stuff)
