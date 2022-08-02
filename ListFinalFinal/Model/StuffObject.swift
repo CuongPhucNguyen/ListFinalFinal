@@ -25,8 +25,9 @@ struct StuffObject:Hashable, Codable, Identifiable {
     
     static func toJsonString(arr: [StuffObject]) -> String{
         var out: String = ""
+        out.append(contentsOf: "[\n")
         for stuff in arr {
-            out.append(contentsOf: "[\n \t{\n")
+            out.append(contentsOf: "\t{\n")
             out.append(contentsOf: "\t\t\"id\" : \(stuff.id)\n")
             out.append(contentsOf: "\t\t\"name\":\"\(stuff.name)\"\n")
             out.append(contentsOf: "\t\t\"desc\":\"\(stuff.desc)\"\n")
@@ -34,8 +35,10 @@ struct StuffObject:Hashable, Codable, Identifiable {
             out.append(contentsOf: "\t\t\"detailedDesc\":\"\(stuff.detailedDesc)\"\n")
             out.append(contentsOf: "\t\t\"iconName\":\"\(stuff.iconName)\"\n")
             out.append(contentsOf: "\t\t\"isFavorite\":\"\(stuff.isFavorite)\"\n")
-            out.append(contentsOf: "\t}\n]")
+            out.append(contentsOf: "\t},\n")
         }
+        out = String(out.dropLast(2))
+        out.append(contentsOf: "\n]")
         return out
     }
 }

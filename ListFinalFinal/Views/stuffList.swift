@@ -50,6 +50,7 @@ struct stuffList: View {
                 filteredStuff = filteredStuffTemp
             }
         }
+        let _ = print(StuffObject.toJsonString(arr: data.stuffArray))
     }
     
 }
