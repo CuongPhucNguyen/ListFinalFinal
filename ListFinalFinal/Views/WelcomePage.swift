@@ -29,6 +29,7 @@ struct welcomePage: View {
         ZStack{
             Color(red: 0.03, green: 0.03, blue: 0.35)
                 .edgesIgnoringSafeArea(.all)
+            Group{
             Image("rmit-logo")
                 .resizable()
                 .renderingMode(.template)
@@ -81,34 +82,8 @@ struct welcomePage: View {
                 .font(.title)
                 .foregroundColor(Color.white)
                 .padding(.bottom, textMoveOut)
-            Button("click to enter"){
-                withAnimation(.easeIn(duration:0.5)){
-                    listOpacity += 1.0
-                    logoOpacity -= 1.0
-                    textOpacity -= 1.0
-                }
-                withAnimation(.easeIn(duration: 0.5).delay(0.5)){
-                    logoReziseH1 += 10000
-                    logoReziseW1 += 10000
-                }
-                withAnimation(.easeOut(duration: 0.5).delay(0.65)){
-                    logoReziseH2 += 10000
-                    logoReziseW2 += 10000
-                }
-                withAnimation(.easeOut(duration: 0.5).delay(0.8)){
-                    maskWidth += 10000
-                    maskHeight += 10000
-                }
-                withAnimation(.easeOut(duration:1.0).delay(0.8)){
-                    filterOpacity -= 1.0
-                    enterList.toggle()
-                }
             }
-            .disabled(buttonDisable)
-            .foregroundColor(Color.white)
-            .font(Font.title)
-            .opacity(textOpacity)
-            .padding(.top, textMoveIn)
+            .rotationEffect(.degrees(360), anchor: .center)
             
         }
         .onAppear{
@@ -121,8 +96,29 @@ struct welcomePage: View {
             withAnimation(.easeIn(duration: 0.5).delay(1)){
                 textOpacity += 1.0
                 textMoveOut += 10
-                textMoveIn -= 10
-                buttonDisable.toggle()
+                
+            }
+            withAnimation(.easeIn(duration:0.5).delay(1)){
+                listOpacity += 1.0
+                logoOpacity -= 1.0
+                textOpacity -= 1.0
+            }
+            withAnimation(.easeIn(duration: 0.5).delay(1.7)){
+                logoReziseH1 += 10000
+                logoReziseW1 += 10000
+            }
+            withAnimation(.easeOut(duration: 0.5).delay(1.85)){
+                logoReziseH2 += 10000
+                logoReziseW2 += 10000
+            }
+            withAnimation(.easeOut(duration: 0.5).delay(1.90)){
+                maskWidth += 10000
+                maskHeight += 10000
+                
+            }
+            withAnimation(.easeOut(duration:1.0).delay(2.05)){
+                filterOpacity -= 1.0
+                enterList.toggle()
             }
             
         }
