@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		903E2C2A28992EA800BBEE52 /* favButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E2C2928992EA700BBEE52 /* favButton.swift */; };
-		903E2C2C28993F8300BBEE52 /* writeToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E2C2B28993F8300BBEE52 /* writeToJson.swift */; };
+		903E2C2F28994AE000BBEE52 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 90B5825D2893B8E2004DABF6 /* Data.json */; };
+		903E2C3028994AE000BBEE52 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 90B5825D2893B8E2004DABF6 /* Data.json */; };
 		905622852897B7940043DDA9 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905622842897B7940043DDA9 /* WelcomePage.swift */; };
 		905622872897D5DD0043DDA9 /* invertedMaskCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905622862897D5DD0043DDA9 /* invertedMaskCircle.swift */; };
 		90B582252893B802004DABF6 /* ListFinalFinalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582242893B802004DABF6 /* ListFinalFinalApp.swift */; };
@@ -46,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		903E2C2928992EA700BBEE52 /* favButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favButton.swift; sourceTree = "<group>"; };
-		903E2C2B28993F8300BBEE52 /* writeToJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = writeToJson.swift; sourceTree = "<group>"; };
 		905622842897B7940043DDA9 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		905622862897D5DD0043DDA9 /* invertedMaskCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = invertedMaskCircle.swift; sourceTree = "<group>"; };
 		90B582212893B802004DABF6 /* ListFinalFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListFinalFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -179,7 +179,6 @@
 				905622842897B7940043DDA9 /* WelcomePage.swift */,
 				905622862897D5DD0043DDA9 /* invertedMaskCircle.swift */,
 				903E2C2928992EA700BBEE52 /* favButton.swift */,
-				903E2C2B28993F8300BBEE52 /* writeToJson.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903E2C2F28994AE000BBEE52 /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903E2C3028994AE000BBEE52 /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +320,6 @@
 				90B5825C2893B8CF004DABF6 /* ModelData.swift in Sources */,
 				905622872897D5DD0043DDA9 /* invertedMaskCircle.swift in Sources */,
 				90B582642893B921004DABF6 /* Icon.swift in Sources */,
-				903E2C2C28993F8300BBEE52 /* writeToJson.swift in Sources */,
 				905622852897B7940043DDA9 /* WelcomePage.swift in Sources */,
 				90B582662893B933004DABF6 /* listInterface.swift in Sources */,
 				90B582602893B8F6004DABF6 /* stuffList.swift in Sources */,

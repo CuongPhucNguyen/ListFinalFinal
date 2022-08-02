@@ -9,29 +9,18 @@ import SwiftUI
 struct stuffList: View {
     @EnvironmentObject var data: modelData
     @State var delayIntro: Double
-    @State var showFav: Bool = false {
-        didSet{
-            filteredStuff = filteredStuffTemp
-        }
-    }
-    
-    var filteredStuffTemp: [StuffObject] {
+    @State var showFav: Bool = false
+    var filteredStuff: [StuffObject] {
         data.stuffArray.filter { stuff in
                 (!showFav || stuff.isFavorite)
             }
     }
-    @State var filteredStuff: [StuffObject] = []
-    
-    
     
     
     var body: some View {
         NavigationView{
             List{
-                Toggle(isOn: $showFav) {
-                    Text("Favorites only")
-                }
-                
+                Toggle("Favorites only",isOn: $showFav)
                 ForEach(filteredStuff){ stuff in
                     NavigationLink{
                         selectedView(stuff:stuff)
@@ -46,11 +35,7 @@ struct stuffList: View {
             .frame(width:UIScreen.main.bounds.width)
             .edgesIgnoringSafeArea(.all)
             .listStyle(GroupedListStyle())
-            .onAppear{
-                filteredStuff = filteredStuffTemp
-            }
         }
-        let _ = print(StuffObject.toJsonString(arr: data.stuffArray))
     }
     
 }
