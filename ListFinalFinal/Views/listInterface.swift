@@ -16,7 +16,7 @@ import SwiftUI
 struct Stuff: View {
     @State var stuff: StuffObject
     @State var delayIn: Int
-    @State var moveIn: Double = 0.0
+    @State var moveIn: Double = UIScreen.main.bounds.width
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -32,13 +32,13 @@ struct Stuff: View {
                     .font(.subheadline)
             }
         }
-        .padding()
-        .onAppear(
-            perform: withAnimation(.easeOut(duration: 0.5).delay(Double(delayIn) + 0.5)){
-                moveIn = UIScreen.main.bounds.width
+        .padding(.leading,moveIn)
+        .onAppear{
+                withAnimation(.easeOut(duration: 0.5).delay(Double(delayIn-1) + 0.2)){
+                moveIn -= UIScreen.main.bounds.width
             }
-        )
-        .padding(.leading, UIScreen.main.bounds.width - moveIn)
+        }
+        
         
     }
     
