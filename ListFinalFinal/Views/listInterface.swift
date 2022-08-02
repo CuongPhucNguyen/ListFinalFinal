@@ -28,6 +28,11 @@ struct Stuff: View {
                             icon(icon: stuff.icon)
                             Text(stuff.name)
                                 .font(.title)
+                            Spacer()
+                            if(stuff.isFavorite){
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(Color.yellow)
+                            }
                         }
                         HStack{
                             Text(stuff.desc)

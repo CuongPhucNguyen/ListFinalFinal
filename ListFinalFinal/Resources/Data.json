@@ -15,7 +15,7 @@
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : true
     },
     {
       "id" :  3 ,
@@ -33,7 +33,7 @@
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : true
     },
     {
       "id" :  5 ,
