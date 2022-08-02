@@ -15,7 +15,7 @@ struct stuffList: View {
                     selectedView(stuff:stuff)
                 }
                 label:{
-                    Stuff(stuff: stuff)
+                    Stuff(stuff: stuff,delayIn:stuff.id)
                 }
                 .navigationTitle("Stuff list")
                 .disabled(enterList)

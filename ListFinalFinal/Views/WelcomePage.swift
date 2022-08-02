@@ -11,115 +11,112 @@ var enterList: Bool = true;
 
 
 struct welcomePage: View {
-    @State var logoOpacity: Double = 0.0
-    @State var textOpacity: Double = 0.0
-    @State var textMoveOut: Double = 0.0
-    @State var textMoveIn: Double = 10.0
-    @State var listForground: Double = 0.0
-    @State var maskWidth: Double = 400
-    @State var maskHeight: Double = 400
-    @State var listOpacity: Double = 0.0
-    @State var logoReziseW1: Double = 400
-    @State var logoReziseH1: Double = 400
-    @State var logoReziseW2: Double = 400
-    @State var logoReziseH2: Double = 400
-    @State var filterOpacity: Double = 0.0
+    @State var maskWidth: Double = 10000
+    @State var maskHeight: Double = 10000
+    @State var logoResizeW1: Double = 0
+    @State var logoResizeH1: Double = 0
+    @State var logoResizeW2: Double = 0
+    @State var logoResizeH2: Double = 0
+    @State var logoResizeW3: Double = 0
+    @State var logoResizeH3: Double = 0
     @State var buttonDisable: Bool = true
+    @State var rotateImg1: Double = 0.0
+    @State var rotateImg2: Double = 0.0
+    @State var rotateImg3: Double = 0.0
+    @State var moveUp1: Double = 0.0
+    @State var moveUp2: Double = 0.0
+    @State var moveUp3: Double = 0.0
+    @State var textOpacity: Double = 0.0
     var body: some View{
         ZStack{
-            Color(red: 0.03, green: 0.03, blue: 0.35)
-                .edgesIgnoringSafeArea(.all)
-            Group{
-            Image("rmit-logo")
-                .resizable()
-                .renderingMode(.template)
-                .frame(width: logoReziseW1, height: logoReziseH1)
-                .opacity(listOpacity)
-                .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.85))
-            Image("rmit-logo")
-                .resizable()
-                .renderingMode(.template)
-                .frame(width: logoReziseW2, height: logoReziseH2)
-                .opacity(listOpacity)
-                .foregroundColor(Color(red: 0.75, green: 0.75, blue: 1.0))
-            stuffList()
-                .mask(
-                    Image("rmit-logo")
-                        .resizable()
-                        .frame(width: maskWidth, height: maskHeight)
-                        .opacity(listOpacity)
-                        .mask(
-                            Image("rmit-logo")
-                                .resizable()
-                                .frame(width: logoReziseW1, height: logoReziseH1)
-                                .opacity(listOpacity)
-                                .foregroundColor(Color(red: 0.1, green: 0.1, blue: 0.35))
-                                .mask(
-                                    Image("rmit-logo")
-                                        .resizable()
-                                        .frame(width: logoReziseW2, height: logoReziseH2)
-                                        .opacity(listOpacity)
-                                        .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.35))
-                                )
-                        )
-                        
-                )
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-            Color(red: 242/255, green: 242/255, blue: 247/255)
-                .mask(
-                    Image("rmit-logo")
-                        .resizable()
-                        .frame(width: maskWidth, height: maskHeight)
-                )
-                .opacity(filterOpacity)
-            Image("rmit-logo")
-                .resizable()
-                .frame(width: maskWidth, height: maskHeight)
-                .opacity(logoOpacity)
-                .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.35))
-            Text("Welcome")
-                .opacity(logoOpacity-textOpacity)
-                .font(.title)
-                .foregroundColor(Color.white)
-                .padding(.bottom, textMoveOut)
-            }
-            .rotationEffect(.degrees(360), anchor: .center)
             
+            
+            stuffList()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            Group{
+                Color(red: 0.03, green: 0.03, blue: 0.35)
+                    .edgesIgnoringSafeArea(.all)
+                Image("rmit-logo")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: logoResizeW1, height: logoResizeH1)
+                    .rotationEffect(.degrees(rotateImg1))
+                    .foregroundColor(Color(red:0.9,green:0.9,blue:0.0))
+                    .padding(.bottom, moveUp1)
+                Image("rmit-logo")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: logoResizeW2, height: logoResizeH2)
+                    .rotationEffect(.degrees(rotateImg2))
+                    .foregroundColor(Color(red:0.9,green:0.75,blue:0.08))
+                    .padding(.bottom, moveUp2)
+                Image("rmit-logo")
+                    .resizable()
+                    .renderingMode(.template)
+                    .frame(width: logoResizeW3, height: logoResizeH3)
+                    .rotationEffect(.degrees(rotateImg3))
+                    .foregroundColor(Color(red:0.9,green:0.5,blue:0.16))
+                    .padding(.bottom, moveUp3)
+                Text("Welcome")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.white)
+                    .padding(.top, 500)
+                    .padding(.bottom,moveUp3)
+                    .opacity(textOpacity)
+                Text("App by Nguyen Phuc Cuong")
+                    .font(.title)
+                    .foregroundColor(Color.white)
+                    .padding(.top, 600)
+                    .padding(.bottom,moveUp3)
+                    .opacity(textOpacity)
+                Text("(Student ID: s3881006)")
+                    .font(.title)
+                    .foregroundColor(Color.white)
+                    .padding(.top, 700)
+                    .padding(.bottom,moveUp3)
+                    .opacity(textOpacity)
+            }
+            .mask(
+                Image("rmit-logo")
+                    .resizable()
+                    .frame(width: maskWidth, height: maskHeight)
+            )
         }
         .onAppear{
-            withAnimation(.easeIn(duration: 0.5)){
-                logoOpacity += 1.0
+            withAnimation(.easeInOut(duration: 1)){
+                rotateImg3 += 360
+                logoResizeH3 += 400
+                logoResizeW3 += 400
+                
             }
-            withAnimation(.default.delay(0.5)){
-                filterOpacity = 1.0
+            withAnimation(.easeInOut(duration: 1).delay(0.1)){
+                rotateImg2 += 360
+                logoResizeH2 += 450
+                logoResizeW2 += 450
             }
-            withAnimation(.easeIn(duration: 0.5).delay(1)){
+            withAnimation(.easeInOut(duration: 1).delay(0.2)){
+                rotateImg1 += 360
+                logoResizeH1 += 500
+                logoResizeW1 += 500
+            }
+            withAnimation(.easeOut(duration: 1).delay(1.2)){
+                moveUp3 += 250
                 textOpacity += 1.0
-                textMoveOut += 10
-                
             }
-            withAnimation(.easeIn(duration:0.5).delay(1)){
-                listOpacity += 1.0
-                logoOpacity -= 1.0
-                textOpacity -= 1.0
+            withAnimation(.easeOut(duration: 1).delay(1.3)){
+                moveUp2 += 250
             }
-            withAnimation(.easeIn(duration: 0.5).delay(1.7)){
-                logoReziseH1 += 10000
-                logoReziseW1 += 10000
+            withAnimation(.easeOut(duration: 1).delay(1.4)){
+                moveUp1 += 250
             }
-            withAnimation(.easeOut(duration: 0.5).delay(1.85)){
-                logoReziseH2 += 10000
-                logoReziseW2 += 10000
+            withAnimation(.easeIn(duration: 1).delay(3.0)){
+                maskWidth = 0.0
+                maskHeight = 0.0
             }
-            withAnimation(.easeOut(duration: 0.5).delay(1.90)){
-                maskWidth += 10000
-                maskHeight += 10000
-                
-            }
-            withAnimation(.easeOut(duration:1.0).delay(2.05)){
-                filterOpacity -= 1.0
+            withAnimation(.easeInOut(duration: 0.5).delay(3.0)) {
                 enterList.toggle()
             }
+            
             
         }
         

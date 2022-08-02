@@ -17,15 +17,18 @@ struct selectedView: View {
                     .font(.title)
                 Spacer()
             }
-                
+            .padding(.bottom, 10)
+            .padding(.leading, 5)
             HStack{
                 Text(stuff.desc)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .padding(.leading, 5)
                 Spacer()
                 Text(stuff.location)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
+                    .padding(.trailing, 5)
             }
             Divider()
             HStack{
@@ -33,6 +36,8 @@ struct selectedView: View {
                     .font(.title2)
                 Spacer()
             }
+            .padding(.bottom, 10)
+            .padding(.leading, 5)
             Text(stuff.detailedDesc)
                 .font(.body)
                 .frame(width:315,alignment:.leading)
