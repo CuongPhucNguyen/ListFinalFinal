@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct stuffList: View {
+    @State var delayIntro: Double
     var body: some View {
         NavigationView{
             List(stuffArray, id: \.id){
@@ -15,11 +16,15 @@ struct stuffList: View {
                     selectedView(stuff:stuff)
                 }
                 label:{
-                    Stuff(stuff: stuff,delayIn:stuff.id)
+                    Stuff(stuff: stuff,delayIn:Double(stuff.id) + (introFinish ? 0 : delayIntro)*10.0)
                 }
                 .navigationTitle("Stuff list")
                 .disabled(enterList)
+                
             }
+            .frame(width:UIScreen.main.bounds.width)
+            .edgesIgnoringSafeArea(.all)
+            .listStyle(GroupedListStyle())
         }
     }
 }
@@ -27,6 +32,6 @@ struct stuffList: View {
 
 struct stuffList_Previews: PreviewProvider {
     static var previews: some View {
-        stuffList()
+        stuffList(delayIntro:0)
     }
 }

@@ -15,27 +15,39 @@ import SwiftUI
 
 struct Stuff: View {
     @State var stuff: StuffObject
-    @State var delayIn: Int
+    @State var delayIn: Double
     @State var moveIn: Double = UIScreen.main.bounds.width
+    @State var appearOnce: Bool = false
     var body: some View {
-        VStack(alignment: .leading){
-            HStack{
-                icon()
-                Text(stuff.name)
-                    .font(.title)
+            Group {
+                ZStack{
+                    Color(red:255,green:255,blue:255)
+                    VStack(alignment: .leading){
+                        
+                        HStack{
+                            icon(icon: stuff.icon)
+                            Text(stuff.name)
+                                .font(.title)
+                        }
+                        HStack{
+                            Text(stuff.desc)
+                                .font(.subheadline)
+                            Spacer()
+                            Text(stuff.location)
+                                .font(.subheadline)
+                        }
+                    }
+                }
+                .frame(width: UIScreen.main.bounds.width - 50, height:100)
             }
-            HStack{
-                Text(stuff.desc)
-                    .font(.subheadline)
-                Spacer()
-                Text(stuff.location)
-                    .font(.subheadline)
-            }
-        }
-        .padding(.leading,moveIn)
-        .onAppear{
-                withAnimation(.easeOut(duration: 0.5).delay(Double(delayIn-1) + 0.2)){
-                moveIn -= UIScreen.main.bounds.width
+            .offset(x:moveIn,y:0)
+            .onAppear{
+                if (!appearOnce){
+                    appearOnce.toggle()
+                    withAnimation(.easeOut(duration: 0.5).delay(delayIn/10)){
+                    moveIn -= UIScreen.main.bounds.width
+                }
+                
             }
         }
         

@@ -9,8 +9,9 @@ import SwiftUI
 
 
 struct icon: View{
+    @State var icon: Image
     var body: some View {
-        Image("placeholder")
+        icon
             .resizable()
             .frame(width: 40, height: 40)
             .clipShape(Circle())
@@ -23,8 +24,9 @@ struct icon: View{
 }
 
 struct selectedImage: View{
+    @State var icon: Image
     var body: some View {
-        Image("placeholder")
+        icon
             .resizable()
             .frame(width: 120, height: 120)
             .clipShape(Circle())
@@ -35,9 +37,13 @@ struct selectedImage: View{
     }
 }
 
+
+
+
 struct Full_Preview: PreviewProvider {
     static var previews: some View{
-        selectedImage()
+        selectedImage(icon:
+        Image("placeholder"))
     }
 }
 

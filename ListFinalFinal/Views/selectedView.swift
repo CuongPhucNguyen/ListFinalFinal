@@ -11,7 +11,7 @@ struct selectedView: View {
     @State var stuff: StuffObject
     var body: some View {
         VStack(alignment: .center){
-            selectedImage()
+            selectedImage(icon:stuff.icon)
             HStack{
                 Text(stuff.name)
                     .font(.title)

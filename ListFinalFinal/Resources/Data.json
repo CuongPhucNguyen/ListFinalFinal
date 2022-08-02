@@ -5,8 +5,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false,
     },
     {
       "id" :  2 ,
@@ -14,8 +14,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  3 ,
@@ -23,8 +23,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  4 ,
@@ -32,8 +32,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  5 ,
@@ -41,8 +41,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  6 ,
@@ -50,8 +50,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  7 ,
@@ -59,8 +59,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  8 ,
@@ -68,8 +68,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     },
     {
       "id" :  9 ,
@@ -77,8 +77,8 @@
       "desc" : "desc" ,
       "location" : "location" ,
       "detailedDesc" : "detailedDesc" ,
-      "iconName" : "iconName" ,
-      "iconNameSelected" : "iconNameSelected"
+      "iconName" : "iconName",
+      "isFavorite" : false
     }
 
 ]

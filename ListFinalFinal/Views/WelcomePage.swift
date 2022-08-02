@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-var enterList: Bool = true;
-
+var enterList: Bool = true
+var introFinish: Bool = false
 
 struct welcomePage: View {
     @State var maskWidth: Double = 10000
@@ -27,11 +27,17 @@ struct welcomePage: View {
     @State var moveUp2: Double = 0.0
     @State var moveUp3: Double = 0.0
     @State var textOpacity: Double = 0.0
+    @State var circleF1: Double = 0.0
+    @State var circleT1: Double = 0.0
+    @State var circleF2: Double = 0.0
+    @State var circleT2: Double = 0.0
+    @State var circleF3: Double = 0.0
+    @State var circleT3: Double = 0.0
     var body: some View{
         ZStack{
             
             
-            stuffList()
+            stuffList(delayIntro: 3.5)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             Group{
                 Color(red: 0.03, green: 0.03, blue: 0.35)
@@ -57,24 +63,41 @@ struct welcomePage: View {
                     .rotationEffect(.degrees(rotateImg3))
                     .foregroundColor(Color(red:0.9,green:0.5,blue:0.16))
                     .padding(.bottom, moveUp3)
+                Group {
+                    Circle()
+                        .trim(from: circleF1,to: circleT1)
+                        .stroke(Color.white,lineWidth: 20)
+                        .frame(width: 350, height: 350)
+                        
+                    Circle()
+                        .trim(from: circleF2,to: circleT2)
+                        .stroke(Color.white,lineWidth: 20)
+                        .frame(width: 300, height: 300)
+
+                    Circle()
+                        .trim(from: circleF3,to: circleT3)
+                        .stroke(Color.white,lineWidth: 20)
+                        .frame(width: 250, height: 250)
+                }
                 Text("Welcome")
-                    .font(.largeTitle)
+                    .font(.largeTitle.weight(.heavy))
                     .foregroundColor(Color.white)
                     .padding(.top, 500)
                     .padding(.bottom,moveUp3)
                     .opacity(textOpacity)
                 Text("App by Nguyen Phuc Cuong")
-                    .font(.title)
+                    .font(.body.weight(.medium))
                     .foregroundColor(Color.white)
                     .padding(.top, 600)
                     .padding(.bottom,moveUp3)
                     .opacity(textOpacity)
                 Text("(Student ID: s3881006)")
-                    .font(.title)
+                    .font(.body.weight(.medium))
                     .foregroundColor(Color.white)
-                    .padding(.top, 700)
+                    .padding(.top, 650)
                     .padding(.bottom,moveUp3)
                     .opacity(textOpacity)
+                
             }
             .mask(
                 Image("rmit-logo")
@@ -87,17 +110,28 @@ struct welcomePage: View {
                 rotateImg3 += 360
                 logoResizeH3 += 400
                 logoResizeW3 += 400
-                
+                circleT3 += 1.0
+                withAnimation(.easeInOut(duration: 1).delay(0.1)){
+                    circleF3 += 1.0
+                }
             }
             withAnimation(.easeInOut(duration: 1).delay(0.1)){
                 rotateImg2 += 360
                 logoResizeH2 += 450
                 logoResizeW2 += 450
+                circleT2 += 1.0
+                withAnimation(.easeInOut(duration: 1).delay(0.2)){
+                    circleF2 += 1.0
+                }
             }
             withAnimation(.easeInOut(duration: 1).delay(0.2)){
                 rotateImg1 += 360
                 logoResizeH1 += 500
                 logoResizeW1 += 500
+                circleT1 += 1.0
+                withAnimation(.easeInOut(duration: 1).delay(0.3)){
+                    circleF1 += 1.0
+                }
             }
             withAnimation(.easeOut(duration: 1).delay(1.2)){
                 moveUp3 += 250
@@ -115,6 +149,7 @@ struct welcomePage: View {
             }
             withAnimation(.easeInOut(duration: 0.5).delay(3.0)) {
                 enterList.toggle()
+                introFinish.toggle()
             }
             
             
