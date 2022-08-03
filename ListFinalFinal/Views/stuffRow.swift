@@ -29,9 +29,6 @@ struct Stuff: View {
                                 .font(.title)
                             Spacer()                        }
                         HStack{
-                            Text(stuff.desc)
-                                .font(.subheadline)
-                            Spacer()
                             Text(stuff.location)
                                 .font(.subheadline)
                         }
