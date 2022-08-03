@@ -1,9 +1,16 @@
-//
-//  MapView.swift
-//  ListFinalFinal
-//
-//  Created by Cuong Nguyen Phuc on 03/08/2022.
-//
+/*
+  RMIT University Vietnam
+  Course: COSC2659 iOS Development
+  Semester: 2022B
+  Assessment: Assignment 2
+  Author: Nguyen Phuc Cuong
+  ID: s381006
+  Created  date: 20/07/2022
+  Last modified: 03/08/2022
+  Acknowledgement:
+        + SwiftUI Tutorials: SwiftUI Essentials Building Lists and Navigation
+            URL: https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
+*/
 
 import Foundation
 import SwiftUI

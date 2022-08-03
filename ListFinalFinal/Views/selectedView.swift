@@ -12,12 +12,6 @@
             URL: https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation
 */
 
-//
-//  selectedView.swift
-//  ListFinalFinal
-//
-//  Created by Cuong Nguyen Phuc on 29/07/2022.
-//
 
 import SwiftUI
 
