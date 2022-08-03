@@ -9,7 +9,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -23,7 +23,7 @@
       "isFavorite" : true,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -37,7 +37,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -51,7 +51,7 @@
       "isFavorite" : true,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -65,7 +65,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -79,7 +79,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -93,7 +93,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -107,7 +107,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     },
@@ -121,7 +121,7 @@
       "isFavorite" : false,
       "coordinates":{
           "latitude":0.1,
-          "longtitude":0.2
+          "longitude":0.2
           
       }
     }

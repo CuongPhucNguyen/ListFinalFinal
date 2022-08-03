@@ -32,14 +32,14 @@ struct StuffObject:Hashable, Codable, Identifiable {
 
     
     
-    struct Coordinates: Hashable, Codable {
-            var latitude: Double
-            var longitude: Double
-    }
+    
     
 }
 
-
+struct Coordinates: Hashable, Codable {
+        var latitude: Double
+        var longitude: Double
+}
 
 
 
