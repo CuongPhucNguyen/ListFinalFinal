@@ -21,10 +21,6 @@ struct stuffList: View {
         NavigationView{
             List{
                 Toggle("Favorites only",isOn: $showFav)
-                    .onChange(of: showFav) { newValue in
-                        reload = !reload
-                        reload = !reload
-                    }
                 ForEach(filteredStuff){ stuff in
                     NavigationLink{
                         selectedView(stuff:stuff)
