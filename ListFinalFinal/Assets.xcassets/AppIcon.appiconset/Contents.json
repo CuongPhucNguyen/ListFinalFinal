@@ -26,18 +26,19 @@
       "size" : "40x40"
     },
     {
+      "filename" : "coffee-icon-8.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "VJT92rGd_4x-2-2.jpg",
+      "filename" : "coffee-icon-3.jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "VJT92rGd_4x-3.jpg",
+      "filename" : "coffee-icon-4.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -73,22 +74,25 @@
       "size" : "40x40"
     },
     {
+      "filename" : "coffee-icon-7.jpg",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "coffee-icon-6.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "coffee-icon-5.jpg",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "VJT92rGd_4x-2.jpg",
+      "filename" : "coffee-icon-2.jpg",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

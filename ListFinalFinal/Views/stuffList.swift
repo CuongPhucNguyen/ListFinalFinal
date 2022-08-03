@@ -10,10 +10,9 @@ struct stuffList: View {
     @EnvironmentObject var data: modelData
     @State var delayIntro: Double
     @State var showFav: Bool = false
-    @State var reload: Bool = false
     var filteredStuff: [StuffObject] {
         data.stuffArray.filter { stuff in
-                ((!showFav || stuff.isFavorite) && !reload)
+                (!showFav || stuff.isFavorite)
             }
     }
     

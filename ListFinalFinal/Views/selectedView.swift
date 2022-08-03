@@ -16,43 +16,52 @@ struct selectedView: View {
         }
     
     var body: some View {
-        VStack(alignment: .center){
-//            MapView()
-//                .ignoresSafeArea(edges: .top)
-//                .frame(height: 300)
-            selectedImage(icon:stuff.icon)
-            
-            HStack{
-                Text(stuff.name)
-                    .font(.title)
+        ScrollView{
+            VStack(alignment: .center){
+                ZStack{
+                    MapView(coordinate: data.stuffArray[stuffIndex].locationCoordinate)
+                        .ignoresSafeArea(edges: .top)
+                        .frame(height: 300)
+                    VStack{
+                    Spacer()
+                        selectedImage(icon:stuff.icon)
+                            .offset(x:0, y:50)
+                    }
+                }
                 Spacer()
-                favButton(favBool: $data.stuffArray[stuffIndex].isFavorite)
+                    .frame(height: 50)
+                HStack{
+                    Text(stuff.name)
+                        .font(.title)
+                    Spacer()
+                    favButton(favBool: $data.stuffArray[stuffIndex].isFavorite)
+                    
+                }
+                .padding(.bottom, 10)
+                .padding(.leading, 5)
+                HStack{
+                    Text(stuff.location)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.trailing, 5)
+                    Spacer()
+                }
+                Divider()
+                HStack{
+                    Text("About \(stuff.name)")
+                        .font(.title2)
+                    Spacer()
+                }
+                .padding(.bottom, 10)
+                .padding(.leading, 5)
+                Text(stuff.detailedDesc)
+                    .font(.body)
+                    .frame(width:315,alignment:.leading)
                 
-            }
-            .padding(.bottom, 10)
-            .padding(.leading, 5)
-            HStack{
-                Text(stuff.location)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .padding(.trailing, 5)
-                Spacer()
-            }
-            Divider()
-            HStack{
-                Text("About \(stuff.name)")
-                    .font(.title2)
-                Spacer()
-            }
-            .padding(.bottom, 10)
-            .padding(.leading, 5)
-            Text(stuff.detailedDesc)
-                .font(.body)
-                .frame(width:315,alignment:.leading)
-            
-            
-            
                 
+                
+                    
+            }
         }
     }
 }
