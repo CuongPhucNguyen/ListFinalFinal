@@ -7,6 +7,11 @@
       "detailedDesc" : "Dùng thìa, bỏ ống, cốc tròn vị: Thưởng thức đồ uống như cách \"ngày xưa\" Cộng Cà Phê xin phép không phục vụ ống hút kèm theo đồ uống. Cộng xin mời các bạn cùng thưởng thức theo cách dùng thìa rất \"ngày xưa\" để cảm nhận tròn vẹn cảm xúc và hương vị của những đồ uống." ,
       "iconName" : "iconName",
       "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  2 ,
@@ -15,7 +20,12 @@
       "location" : "443 Nguyễn Thị Thập, Tân Quy, Quận 7, Thành phố Hồ Chí Minh 100000" ,
       "detailedDesc" : "detailedDesc" ,
       "iconName" : "iconName",
-      "isFavorite" : true
+      "isFavorite" : true,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  3 ,
@@ -24,7 +34,12 @@
       "location" : "168 Khánh Hội, Phường 6, Quận 4, Thành phố Hồ Chí Minh" ,
       "detailedDesc" : "detailedDesc" ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  4 ,
@@ -33,7 +48,12 @@
       "location" : "93 Yersin, Phường Cầu Ông Lãnh, Quận 1, Thành phố Hồ Chí Minh" ,
       "detailedDesc" : "detailedDesc" ,
       "iconName" : "iconName",
-      "isFavorite" : true
+      "isFavorite" : true,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  5 ,
@@ -42,43 +62,68 @@
       "location" : "136 Đ. Sương Nguyệt Anh, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh" ,
       "detailedDesc" : "detailedDesc" ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  6 ,
-      "name" : "name6" ,
+      "name" : "Highlands Coffee 195 Trung Sơn" ,
       "desc" : "desc" ,
-      "location" : "location" ,
-      "detailedDesc" : "detailedDesc" ,
+      "location" : "195 Đường số 9A, Khu dân cư Trung Sơn, Bình Chánh, Thành phố Hồ Chí Minh 700000" ,
+      "detailedDesc" : "Highlands Coffee is a Vietnamese coffee shop chain and producer and distributor of coffee products, established in Hanoi by Vietnamese American David Thai in 1998. The establishment of the Highlands Coffee company marked the first time an overseas Vietnamese was able to register a private company within Vietnam." ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  7 ,
-      "name" : "name7" ,
+      "name" : "Highlands Coffee" ,
       "desc" : "desc" ,
-      "location" : "location" ,
-      "detailedDesc" : "detailedDesc" ,
+      "location" : "702 Nguyễn Văn Linh, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh 700000" ,
+      "detailedDesc" : "Highlands Coffee is a Vietnamese coffee shop chain and producer and distributor of coffee products, established in Hanoi by Vietnamese American David Thai in 1998. The establishment of the Highlands Coffee company marked the first time an overseas Vietnamese was able to register a private company within Vietnam." ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  8 ,
-      "name" : "name8" ,
+      "name" : "Highlands Coffee" ,
       "desc" : "desc" ,
-      "location" : "location" ,
-      "detailedDesc" : "detailedDesc" ,
+      "location" : "139 Nguyễn Thị Thập, Ward, Quận 7, Thành phố Hồ Chí Minh" ,
+      "detailedDesc" : "Highlands Coffee is a Vietnamese coffee shop chain and producer and distributor of coffee products, established in Hanoi by Vietnamese American David Thai in 1998. The establishment of the Highlands Coffee company marked the first time an overseas Vietnamese was able to register a private company within Vietnam." ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     },
     {
       "id" :  9 ,
-      "name" : "name9" ,
+      "name" : "Highlands Coffee" ,
       "desc" : "desc" ,
-      "location" : "location" ,
-      "detailedDesc" : "detailedDesc" ,
+      "location" : "469 Đ.Nguyễn Hữu Thọ, Tân Hưng, Quận 7, Thành phố Hồ Chí Minh" ,
+      "detailedDesc" : "Highlands Coffee is a Vietnamese coffee shop chain and producer and distributor of coffee products, established in Hanoi by Vietnamese American David Thai in 1998. The establishment of the Highlands Coffee company marked the first time an overseas Vietnamese was able to register a private company within Vietnam." ,
       "iconName" : "iconName",
-      "isFavorite" : false
+      "isFavorite" : false,
+      "coordinates":{
+          "latitude":0.1,
+          "longtitude":0.2
+          
+      }
     }
 
 ]

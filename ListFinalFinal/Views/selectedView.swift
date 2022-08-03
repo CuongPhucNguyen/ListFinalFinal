@@ -17,6 +17,9 @@ struct selectedView: View {
     
     var body: some View {
         VStack(alignment: .center){
+//            MapView()
+//                .ignoresSafeArea(edges: .top)
+//                .frame(height: 300)
             selectedImage(icon:stuff.icon)
             
             HStack{
@@ -29,15 +32,11 @@ struct selectedView: View {
             .padding(.bottom, 10)
             .padding(.leading, 5)
             HStack{
-                Text(stuff.desc)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                    .padding(.leading, 5)
-                Spacer()
                 Text(stuff.location)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .padding(.trailing, 5)
+                Spacer()
             }
             Divider()
             HStack{

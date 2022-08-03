@@ -6,6 +6,7 @@
 //
 import Foundation
 import SwiftUI
+import CoreLocation
 
 
 
@@ -20,6 +21,20 @@ struct StuffObject:Hashable, Codable, Identifiable {
     var isFavorite: Bool
     var icon: Image{
         Image(iconName)
+    }
+    
+    private var coordinates: Coordinates
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude)
+    }
+
+    
+    
+    struct Coordinates: Hashable, Codable {
+            var latitude: Double
+            var longitude: Double
     }
     
 }
