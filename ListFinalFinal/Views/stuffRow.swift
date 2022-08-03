@@ -1,5 +1,5 @@
 //
-//  listInterface.swift
+//  stuffRow.swift
 //  ListFinalFinal
 //
 //  Created by Cuong Nguyen Phuc on 29/07/2022.

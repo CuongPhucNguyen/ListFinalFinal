@@ -25,7 +25,7 @@
 		90B582602893B8F6004DABF6 /* stuffList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B5825F2893B8F6004DABF6 /* stuffList.swift */; };
 		90B582622893B907004DABF6 /* selectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582612893B907004DABF6 /* selectedView.swift */; };
 		90B582642893B921004DABF6 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582632893B921004DABF6 /* Icon.swift */; };
-		90B582662893B933004DABF6 /* listInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582652893B933004DABF6 /* listInterface.swift */; };
+		90B582662893B933004DABF6 /* stuffRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582652893B933004DABF6 /* stuffRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		90B5825F2893B8F6004DABF6 /* stuffList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stuffList.swift; sourceTree = "<group>"; };
 		90B582612893B907004DABF6 /* selectedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectedView.swift; sourceTree = "<group>"; };
 		90B582632893B921004DABF6 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
-		90B582652893B933004DABF6 /* listInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listInterface.swift; sourceTree = "<group>"; };
+		90B582652893B933004DABF6 /* stuffRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stuffRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +175,7 @@
 				90B5825F2893B8F6004DABF6 /* stuffList.swift */,
 				90B582612893B907004DABF6 /* selectedView.swift */,
 				90B582632893B921004DABF6 /* Icon.swift */,
-				90B582652893B933004DABF6 /* listInterface.swift */,
+				90B582652893B933004DABF6 /* stuffRow.swift */,
 				905622842897B7940043DDA9 /* WelcomePage.swift */,
 				905622862897D5DD0043DDA9 /* invertedMaskCircle.swift */,
 				903E2C2928992EA700BBEE52 /* favButton.swift */,
@@ -321,7 +321,7 @@
 				905622872897D5DD0043DDA9 /* invertedMaskCircle.swift in Sources */,
 				90B582642893B921004DABF6 /* Icon.swift in Sources */,
 				905622852897B7940043DDA9 /* WelcomePage.swift in Sources */,
-				90B582662893B933004DABF6 /* listInterface.swift in Sources */,
+				90B582662893B933004DABF6 /* stuffRow.swift in Sources */,
 				90B582602893B8F6004DABF6 /* stuffList.swift in Sources */,
 				90B582252893B802004DABF6 /* ListFinalFinalApp.swift in Sources */,
 				90B5825A2893B8B1004DABF6 /* StuffObject.swift in Sources */,
