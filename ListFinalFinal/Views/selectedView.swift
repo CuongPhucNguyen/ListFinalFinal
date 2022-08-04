@@ -17,17 +17,17 @@ import SwiftUI
 
 struct selectedView: View {
     @EnvironmentObject var data: modelData
-    @State var stuff: StuffObject
+    @State var stuff: cafeObject
     
     var stuffIndex: Int {
-            data.stuffArray.firstIndex(where: { $0.id == stuff.id })!
+            data.cafeArray.firstIndex(where: { $0.id == stuff.id })!
         }
     
     var body: some View {
         ScrollView{
             VStack(alignment: .center){
                 ZStack{
-                    MapView(coordinate: data.stuffArray[stuffIndex].locationCoordinate)
+                    MapView(coordinate: data.cafeArray[stuffIndex].locationCoordinate)
                         .ignoresSafeArea(edges: .top)
                         .frame(height: 300)
                     VStack{
@@ -42,7 +42,7 @@ struct selectedView: View {
                     Text(stuff.name)
                         .font(.title)
                     Spacer()
-                    favButton(favBool: $data.stuffArray[stuffIndex].isFavorite)
+                    favButton(favBool: $data.cafeArray[stuffIndex].isFavorite)
                     
                 }
                 .padding(.bottom, 10)
@@ -76,7 +76,7 @@ struct selectedView: View {
 
 struct selectedView_Previews: PreviewProvider {
     static var previews: some View {
-        selectedView(stuff:modelData().stuffArray[0])
+        selectedView(stuff:modelData().cafeArray[0])
     }
 }
 

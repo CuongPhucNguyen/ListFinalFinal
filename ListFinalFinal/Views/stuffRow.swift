@@ -19,8 +19,8 @@ import SwiftUI
 
 
 
-struct Stuff: View {
-    @State var stuff: StuffObject
+struct cafe: View {
+    var stuff: cafeObject
     @State var delayIn: Double
     @State var moveIn: Double = UIScreen.main.bounds.width
     var body: some View {
@@ -33,7 +33,13 @@ struct Stuff: View {
                             icon(icon: stuff.icon)
                             Text(stuff.name)
                                 .font(.title)
-                            Spacer()                        }
+                            Spacer()
+                            if (stuff.isFavorite){
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                            }
+                            
+                        }
                         HStack{
                             Text(stuff.location)
                                 .font(.subheadline)
@@ -60,8 +66,7 @@ struct Stuff: View {
 struct Stuff_Previews: PreviewProvider {
     static var previews: some View {
         Group{
-            Stuff(stuff: modelData().stuffArray[0],delayIn: 1)
-            Stuff(stuff: modelData().stuffArray[1],delayIn: 2)
+            cafe(stuff: modelData().cafeArray[2],delayIn: 2)
         }
         
     }
