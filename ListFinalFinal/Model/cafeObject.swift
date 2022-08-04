@@ -28,7 +28,7 @@ import CoreLocation
     Hashable, Codable and Identifiable protocols were inplemented
     so that the project can add the JSON reading functionality
 */
-struct cafeObject:Hashable, Codable, Identifiable {
+struct CafeObject:Hashable, Codable, Identifiable {
 // <----------------------------------------------Implemented on 20/07/2022------------------------------------------------->
     let id: Int                                         //constant id (Integer) to conform to the Identifiable protocol
     let name: String                                    //constant name (String) for the name of the objects

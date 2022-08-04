@@ -23,18 +23,18 @@ import Combine
 
 //ObservableObject class used for getting the JSON data and parse into an array that is named "stuffArray"
 final class modelData: ObservableObject {
-    @Published var cafeArray: [cafeObject] = load(filename: "Data.json")
+    @Published var cafeArray: [CafeObject] = load(filename: "Data.json")
 }
 
 
 
 //JSON decoder function
-func load(filename: String) -> [cafeObject] {
+func load(filename: String) -> [CafeObject] {
     if let file = Bundle.main.url(forResource: filename, withExtension: nil){           //getting the file's url from bundle
         if let data = try? Data(contentsOf: file){                                      //try to get the contents of the JSON file and pass it in the variable "data"
             do {
                 let decoder = JSONDecoder()                                             //declare a new decoder
-                let decoded = try decoder.decode([cafeObject].self, from: data)        //decode from the JSON file (which url is in the "data" variable) using []
+                let decoded = try decoder.decode([CafeObject].self, from: data)        //decode from the JSON file (which url is in the "data" variable) using []
                 return decoded
             } catch let error {
                 fatalError("Failed to decode JSON: \(error)")
@@ -43,5 +43,5 @@ func load(filename: String) -> [cafeObject] {
     } else {
         fatalError("Couldn't load \(filename) file")
     }
-    return [] as [cafeObject]
+    return [] as [CafeObject]
 }

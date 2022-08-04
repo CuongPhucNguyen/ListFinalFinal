@@ -16,11 +16,11 @@
 
 import SwiftUI
 
-struct cafeList: View {
+struct CafeList: View {
     @EnvironmentObject var data: modelData
     @State var delayIntro: Double
     @State var showFav: Bool = false
-    var filteredStuff: [cafeObject] {
+    var filteredStuff: [CafeObject] {
         data.cafeArray.filter { stuff in
                 (!showFav || stuff.isFavorite)
             }
@@ -52,6 +52,6 @@ struct cafeList: View {
 
 struct stuffList_Previews: PreviewProvider {
     static var previews: some View {
-        cafeList(delayIntro:0).environmentObject(modelData())
+        CafeList(delayIntro:0).environmentObject(modelData())
     }
 }
