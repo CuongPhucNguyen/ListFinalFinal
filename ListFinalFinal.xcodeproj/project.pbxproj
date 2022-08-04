@@ -12,7 +12,7 @@
 		903E2C2F28994AE000BBEE52 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 90B5825D2893B8E2004DABF6 /* Data.json */; };
 		903E2C3028994AE000BBEE52 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 90B5825D2893B8E2004DABF6 /* Data.json */; };
 		905622852897B7940043DDA9 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905622842897B7940043DDA9 /* WelcomePage.swift */; };
-		90B582252893B802004DABF6 /* ListFinalFinalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582242893B802004DABF6 /* ListFinalFinalApp.swift */; };
+		90B582252893B802004DABF6 /* MyCafeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582242893B802004DABF6 /* MyCafeList.swift */; };
 		90B582292893B803004DABF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B582282893B803004DABF6 /* Assets.xcassets */; };
 		90B5822C2893B803004DABF6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90B5822B2893B803004DABF6 /* Preview Assets.xcassets */; };
 		90B582362893B804004DABF6 /* ListFinalFinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B582352893B804004DABF6 /* ListFinalFinalTests.swift */; };
@@ -48,8 +48,8 @@
 		90036E6C289A694500462B80 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		903E2C2928992EA700BBEE52 /* FavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavButton.swift; sourceTree = "<group>"; };
 		905622842897B7940043DDA9 /* WelcomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
-		90B582212893B802004DABF6 /* ListFinalFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListFinalFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90B582242893B802004DABF6 /* ListFinalFinalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFinalFinalApp.swift; sourceTree = "<group>"; };
+		90B582212893B802004DABF6 /* MyCafeList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCafeList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90B582242893B802004DABF6 /* MyCafeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCafeList.swift; sourceTree = "<group>"; };
 		90B582282893B803004DABF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90B5822B2893B803004DABF6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90B582312893B804004DABF6 /* ListFinalFinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListFinalFinalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,7 +104,7 @@
 		90B582222893B802004DABF6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90B582212893B802004DABF6 /* ListFinalFinal.app */,
+				90B582212893B802004DABF6 /* MyCafeList.app */,
 				90B582312893B804004DABF6 /* ListFinalFinalTests.xctest */,
 				90B5823B2893B804004DABF6 /* ListFinalFinalUITests.xctest */,
 			);
@@ -117,7 +117,7 @@
 				90B582582893B89F004DABF6 /* Views */,
 				90B582572893B898004DABF6 /* Resources */,
 				90B582562893B893004DABF6 /* Model */,
-				90B582242893B802004DABF6 /* ListFinalFinalApp.swift */,
+				90B582242893B802004DABF6 /* MyCafeList.swift */,
 				90B582282893B803004DABF6 /* Assets.xcassets */,
 				90B5822A2893B803004DABF6 /* Preview Content */,
 			);
@@ -197,7 +197,7 @@
 			);
 			name = ListFinalFinal;
 			productName = ListFinalFinal;
-			productReference = 90B582212893B802004DABF6 /* ListFinalFinal.app */;
+			productReference = 90B582212893B802004DABF6 /* MyCafeList.app */;
 			productType = "com.apple.product-type.application";
 		};
 		90B582302893B804004DABF6 /* ListFinalFinalTests */ = {
@@ -319,7 +319,7 @@
 				905622852897B7940043DDA9 /* WelcomePage.swift in Sources */,
 				90B582662893B933004DABF6 /* CafeRow.swift in Sources */,
 				90B582602893B8F6004DABF6 /* CafeList.swift in Sources */,
-				90B582252893B802004DABF6 /* ListFinalFinalApp.swift in Sources */,
+				90B582252893B802004DABF6 /* MyCafeList.swift in Sources */,
 				90B5825A2893B8B1004DABF6 /* CafeObject.swift in Sources */,
 				90B582622893B907004DABF6 /* SelectedView.swift in Sources */,
 				903E2C2A28992EA800BBEE52 /* FavButton.swift in Sources */,
@@ -496,7 +496,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RMIT.ListFinalFinal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MyCafeList;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,7 +524,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RMIT.ListFinalFinal;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MyCafeList;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

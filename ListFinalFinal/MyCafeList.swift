@@ -12,7 +12,7 @@
 import SwiftUI
 
 @main
-struct ListFinalFinalApp: App {
+struct MyCafeList: App {
     var body: some Scene {
         WindowGroup {
             WelcomePage()                       //Open the intro view from WelcomePage.swift
