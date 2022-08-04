@@ -10,22 +10,31 @@
   Acknowledgement:
 */
 
+
+
+
+
 import Foundation
 import Combine
 
+
+
+
+
+//ObservableObject class used for getting the JSON data and parse into an array that is named "stuffArray"
 final class modelData: ObservableObject {
     @Published var stuffArray: [StuffObject] = load(filename: "Data.json")
 }
 
 
 
-
+//JSON decoder function
 func load(filename: String) -> [StuffObject] {
-    if let file = Bundle.main.url(forResource: filename, withExtension: nil){
-        if let data = try? Data(contentsOf: file){
+    if let file = Bundle.main.url(forResource: filename, withExtension: nil){           //getting the file's url from bundle
+        if let data = try? Data(contentsOf: file){                                      //try to get the contents of the JSON file and pass it in the variable "data"
             do {
-                let decoder = JSONDecoder()
-                let decoded = try decoder.decode([StuffObject].self, from: data)
+                let decoder = JSONDecoder()                                             //declare a new decoder
+                let decoded = try decoder.decode([StuffObject].self, from: data)        //decode from the JSON file (which url is in the "data" variable) using []
                 return decoded
             } catch let error {
                 fatalError("Failed to decode JSON: \(error)")
