@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct icon: View{
+struct Icon: View{
     @State var icon: Image
     var body: some View {
         icon
@@ -23,7 +23,7 @@ struct icon: View{
     }
 }
 
-struct selectedImage: View{
+struct SelectedImage: View{
     @State var icon: Image
     var body: some View {
         icon
@@ -42,7 +42,7 @@ struct selectedImage: View{
 
 struct Full_Preview: PreviewProvider {
     static var previews: some View{
-        selectedImage(icon:
+        SelectedImage(icon:
         Image("placeholder"))
     }
 }

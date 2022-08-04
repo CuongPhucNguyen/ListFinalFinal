@@ -15,9 +15,9 @@
 
 import SwiftUI
 
-struct selectedView: View {
-    @EnvironmentObject var data: modelData
-    @State var stuff: cafeObject
+struct SelectedView: View {
+    @EnvironmentObject var data: ModelData
+    @State var stuff: CafeObject
     
     var stuffIndex: Int {
             data.cafeArray.firstIndex(where: { $0.id == stuff.id })!
@@ -32,7 +32,7 @@ struct selectedView: View {
                         .frame(height: 300)
                     VStack{
                     Spacer()
-                        selectedImage(icon:stuff.icon)
+                        SelectedImage(icon:stuff.icon)
                             .offset(x:0, y:50)
                     }
                 }
@@ -42,7 +42,7 @@ struct selectedView: View {
                     Text(stuff.name)
                         .font(.title)
                     Spacer()
-                    favButton(favBool: $data.cafeArray[stuffIndex].isFavorite)
+                    FavButton(favBool: $data.cafeArray[stuffIndex].isFavorite)
                     
                 }
                 .padding(.bottom, 10)
@@ -74,9 +74,9 @@ struct selectedView: View {
     }
 }
 
-struct selectedView_Previews: PreviewProvider {
+struct SelectedView_Previews: PreviewProvider {
     static var previews: some View {
-        selectedView(stuff:modelData().cafeArray[0])
+        SelectedView(stuff:ModelData().cafeArray[0])
     }
 }
 

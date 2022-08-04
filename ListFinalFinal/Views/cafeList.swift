@@ -17,7 +17,7 @@
 import SwiftUI
 
 struct CafeList: View {
-    @EnvironmentObject var data: modelData
+    @EnvironmentObject var data: ModelData
     @State var delayIntro: Double
     @State var showFav: Bool = false
     var filteredStuff: [CafeObject] {
@@ -32,10 +32,10 @@ struct CafeList: View {
                 Toggle("Favorites only",isOn: $showFav)
                 ForEach(filteredStuff){ stuff in
                     NavigationLink{
-                        selectedView(stuff:stuff)
+                        SelectedView(stuff:stuff)
                     }
                     label:{
-                        cafe(stuff: stuff,delayIn:Double(stuff.id) + (introFinish ? 0 : delayIntro)*10.0)
+                        CafeRow(stuff: stuff,delayIn:Double(stuff.id) + (introFinish ? 0 : delayIntro)*10.0)
                     }
                     .navigationTitle("Cafe area list")
                     .disabled(enterList)
@@ -50,8 +50,8 @@ struct CafeList: View {
 }
 
 
-struct stuffList_Previews: PreviewProvider {
+struct CafeList_Previews: PreviewProvider {
     static var previews: some View {
-        CafeList(delayIntro:0).environmentObject(modelData())
+        CafeList(delayIntro:0).environmentObject(ModelData())
     }
 }

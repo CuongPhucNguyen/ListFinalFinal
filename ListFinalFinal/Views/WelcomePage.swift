@@ -15,7 +15,7 @@ import SwiftUI
 var enterList: Bool = true
 var introFinish: Bool = false
 
-struct welcomePage: View {
+struct WelcomePage: View {
     @State var maskWidth: Double = 10000
     @State var maskHeight: Double = 10000
     @State var logoResizeW1: Double = 0
@@ -42,7 +42,7 @@ struct welcomePage: View {
         ZStack{
             
             
-            CafeList(delayIntro: 3.5).environmentObject(modelData())
+            CafeList(delayIntro: 3.5).environmentObject(ModelData())
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             Group{
                 Color(red: 0.03, green: 0.03, blue: 0.35)
@@ -168,8 +168,8 @@ struct welcomePage: View {
 
 
 
-struct welcomePage_Preview : PreviewProvider {
+struct WelcomePage_Preview : PreviewProvider {
     static var previews: some View{
-        welcomePage()
+        WelcomePage()
     }
 }

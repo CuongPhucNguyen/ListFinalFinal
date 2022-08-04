@@ -22,7 +22,7 @@ import Combine
 
 
 //ObservableObject class used for getting the JSON data and parse into an array that is named "stuffArray"
-final class modelData: ObservableObject {
+final class ModelData: ObservableObject {
     @Published var cafeArray: [CafeObject] = load(filename: "Data.json")
 }
 
