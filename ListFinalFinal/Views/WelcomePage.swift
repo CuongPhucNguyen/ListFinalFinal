@@ -42,7 +42,7 @@ struct WelcomePage: View {
         ZStack{
             
             
-            CafeList(delayIntro: 3.5).environmentObject(ModelData())
+            CafeList(delayIntro: 4.0).environmentObject(ModelData())
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
             Group{
                 Color(red: 0.03, green: 0.03, blue: 0.35)
@@ -151,11 +151,13 @@ struct WelcomePage: View {
             withAnimation(.easeIn(duration: 1).delay(3.0)){
                 maskWidth = 0.0
                 maskHeight = 0.0
-            }
-            withAnimation(.easeInOut(duration: 0.5).delay(3.0)) {
                 enterList.toggle()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                 introFinish.toggle()
             }
+                
+            
             
             
         }

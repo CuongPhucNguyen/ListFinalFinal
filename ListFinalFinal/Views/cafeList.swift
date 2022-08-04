@@ -60,6 +60,7 @@ struct CafeList: View {
                     
                 //adding label for the objects in the list
                 label:{
+                    //get the label as well as the delay time for each rows sliding in. The animation will have extra delay time if the intro has not finised
                     CafeRow(stuff: stuff,delayIn:Double(stuff.id) + (introFinish ? 0 : delayIntro)*10.0)
                 }
                 .navigationTitle("Cafe area list")  //add title

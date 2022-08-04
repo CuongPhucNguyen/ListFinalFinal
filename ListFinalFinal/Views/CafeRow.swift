@@ -67,6 +67,10 @@ struct CafeRow: View {
         .onAppear{
             
             
+            if (!introFinish){
+                moveIn = UIScreen.main.bounds.width
+            }
+            
             //Check if the "moveIn" variable is currently 0 to determine whether to trigger the move to the position animation. If it's not 0, thew animation will trigger and the object row will be moved into position. If it's 0, the position will remain unchanged
             if (moveIn != 0){
                 
