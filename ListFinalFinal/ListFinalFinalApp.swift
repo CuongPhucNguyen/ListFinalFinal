@@ -15,7 +15,7 @@ import SwiftUI
 struct ListFinalFinalApp: App {
     var body: some Scene {
         WindowGroup {
-            WelcomePage()
+            WelcomePage()                       //Open the intro view from WelcomePage.swift
         }
     }
 }

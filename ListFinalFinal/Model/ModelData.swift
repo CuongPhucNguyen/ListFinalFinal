@@ -23,7 +23,7 @@ import Combine
 
 //ObservableObject class used for getting the JSON data and parse into an array that is named "stuffArray"
 final class ModelData: ObservableObject {
-    @Published var cafeArray: [CafeObject] = load(filename: "Data.json")
+    @Published var cafeArray: [CafeObject] = load(filename: "Data.json")                //get data loaded from the JSON
 }
 
 
@@ -34,14 +34,14 @@ func load(filename: String) -> [CafeObject] {
         if let data = try? Data(contentsOf: file){                                      //try to get the contents of the JSON file and pass it in the variable "data"
             do {
                 let decoder = JSONDecoder()                                             //declare a new decoder
-                let decoded = try decoder.decode([CafeObject].self, from: data)        //decode from the JSON file (which url is in the "data" variable) using []
+                let decoded = try decoder.decode([CafeObject].self, from: data)         //decode from the JSON file (which url is in the "data" variable) using []
                 return decoded
             } catch let error {
-                fatalError("Failed to decode JSON: \(error)")
+                fatalError("Failed to decode JSON: \(error)")                           //return erorr code if it's unreadable for any reason
             }
         }
     } else {
-        fatalError("Couldn't load \(filename) file")
+        fatalError("Couldn't load \(filename) file")                                    //return error code if the file is not accessable in the first place
     }
-    return [] as [CafeObject]
+    return [] as [CafeObject]                                                           //return the value as an array of CafeObject
 }

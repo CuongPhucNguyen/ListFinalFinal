@@ -40,13 +40,14 @@ struct SelectedView: View {
         ScrollView{
             VStack(alignment: .center){
                 ZStack{
+                    
+                    
                     //Adding map view
                     MapView(coordinate: data.cafeArray[stuffIndex].locationCoordinate)
                         .ignoresSafeArea(edges: .top)
                         .frame(height: 300)
                     VStack{
                         Spacer()
-                        
                         SelectedImage(icon:stuff.icon)
                             .offset(x:0, y:50)
                     }
@@ -54,10 +55,16 @@ struct SelectedView: View {
                 Spacer()
                     .frame(height: 50)
                 HStack{
+                    
+                    
+                    
                     //display the object's name
                     Text(stuff.name)
                         .font(.title)
                     Spacer()
+                    
+                    
+                    
                     //Adding favorite button
                     FavButton(favBool: $data.cafeArray[stuffIndex].isFavorite)
                     
@@ -65,6 +72,9 @@ struct SelectedView: View {
                 .padding(.bottom, 10)
                 .padding(.leading, 5)
                 HStack{
+                    
+                    
+                    
                     //display the location information
                     Text(stuff.location)
                         .font(.subheadline)
@@ -74,6 +84,8 @@ struct SelectedView: View {
                 }
                 Divider()
                 HStack{
+                    
+                    
                     //Display the "About" title
                     Text("About \(stuff.name)")
                         .font(.title2)
@@ -81,6 +93,9 @@ struct SelectedView: View {
                 }
                 .padding(.bottom, 10)
                 .padding(.leading, 5)
+                
+                
+                
                 //Display the detailed information
                 Text(stuff.detailedDesc)
                     .font(.body)

@@ -45,6 +45,8 @@ struct CafeList: View {
         NavigationView{
             //Create a list of objects
             List{
+                
+                
                 //Toggling "show favorite" button
                 Toggle("Favorites only",isOn: $showFav)
                 

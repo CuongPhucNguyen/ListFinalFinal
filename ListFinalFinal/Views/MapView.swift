@@ -16,6 +16,8 @@ import Foundation
 import SwiftUI
 import MapKit
 
+
+//Adding map view
 struct MapView: View {
     var coordinate: CLLocationCoordinate2D
     @State private var region: MKCoordinateRegion
@@ -23,8 +25,16 @@ struct MapView: View {
     var body: some View {
         Map(coordinateRegion: $region)
     }
+    
+    
+    //initial code for when data is passed into the MapView struct
     init(coordinate: CLLocationCoordinate2D){
+        
+        //adding coordinates into the coordinate variables
         self.coordinate = coordinate
+        
+        
+        //parsing the informations into a coordinate region so that it can be displayed in a map for viewing
         self.region = MKCoordinateRegion(
             center: coordinate,
             span: MKCoordinateSpan(latitudeDelta: 0.0008, longitudeDelta: 0.0008)

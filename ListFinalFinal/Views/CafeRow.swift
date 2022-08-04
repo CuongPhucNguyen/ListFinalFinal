@@ -20,10 +20,18 @@ import SwiftUI
 
 //Structure for the object row displayed in the list
 struct CafeRow: View {
+    
+    
+    
     //passing in the object that is used for displaying the list
     var stuff: CafeObject
+    
+    
+    
     //variable used for delaying the animation from playing before the intro sequence animation is completed. Also, the animation of each object is delayed based on their id to create a wave effect
     @State var delayIn: Double
+    
+    
     //variable used for keeping the row outside the border of the screen until the intro animation is completed. Once the intro animation is completed, the slide in animation of each of the objects in the list will be executed
     @State var moveIn: Double = UIScreen.main.bounds.width
     var body: some View {
@@ -52,13 +60,21 @@ struct CafeRow: View {
             .frame(width: UIScreen.main.bounds.width - 50, height:100)
         }
         .offset(x:moveIn,y:0)
+        
+        
+        
         //Play animation upon appearing
         .onAppear{
+            
+            
             //Check if the "moveIn" variable is currently 0 to determine whether to trigger the move to the position animation. If it's not 0, thew animation will trigger and the object row will be moved into position. If it's 0, the position will remain unchanged
             if (moveIn != 0){
                 
+                
                 //Animation will be played for 0.5 and each has a 0.1 delay time compare to the previous one should the id increase linearly (e.g. 1,2,3,...,9,10)
                 withAnimation(.easeOut(duration: 0.5).delay(delayIn/10)){
+                    
+                    
                     //Execute reduce the moveIn variable to create moving effect
                     moveIn -= UIScreen.main.bounds.width
                 }
