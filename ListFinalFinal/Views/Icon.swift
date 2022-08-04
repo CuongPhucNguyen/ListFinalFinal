@@ -1,13 +1,18 @@
-//
-//  Icon.swift
-//  ListFinalFinal
-//
-//  Created by Cuong Nguyen Phuc on 29/07/2022.
-//
+/*
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Nguyen Phuc Cuong
+ ID: s381006
+ Created  date: 20/07/2022
+ Last modified: 29/07/2022
+ Acknowledgement:
+*/
 
 import SwiftUI
 
-
+//View for the icon used in the list view
 struct Icon: View{
     @State var icon: Image
     var body: some View {
@@ -23,6 +28,9 @@ struct Icon: View{
     }
 }
 
+
+
+//View for the icon used in the selected detailed view
 struct SelectedImage: View{
     @State var icon: Image
     var body: some View {
@@ -43,7 +51,7 @@ struct SelectedImage: View{
 struct Full_Preview: PreviewProvider {
     static var previews: some View{
         SelectedImage(icon:
-        Image("placeholder"))
+                        Image("placeholder"))
     }
 }
 

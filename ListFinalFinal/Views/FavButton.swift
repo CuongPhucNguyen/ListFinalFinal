@@ -1,16 +1,16 @@
 /*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 2
-  Author: Nguyen Phuc Cuong
-  ID: s381006
-  Created  date: 20/07/2022
-  Last modified: 03/08/2022
-  Acknowledgement:
-        + SwiftUI Tutorials: SwiftUI Essentials Handling User Input
-            URL: https://developer.apple.com/tutorials/swiftui/handling-user-input
-*/
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Nguyen Phuc Cuong
+ ID: s381006
+ Created  date: 20/07/2022
+ Last modified: 03/08/2022
+ Acknowledgement:
+     + SwiftUI Tutorials: SwiftUI Essentials Handling User Input
+        URL: https://developer.apple.com/tutorials/swiftui/handling-user-input
+ */
 
 import Foundation
 import SwiftUI

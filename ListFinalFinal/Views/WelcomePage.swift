@@ -1,19 +1,19 @@
 /*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 2
-  Author: Nguyen Phuc Cuong
-  ID: s381006
-  Created  date: 20/07/2022
-  Last modified: 03/08/2022
-  Acknowledgement:
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Nguyen Phuc Cuong
+ ID: s381006
+ Created  date: 20/07/2022
+ Last modified: 03/08/2022
+ Acknowledgement:
 */
 
 import SwiftUI
 
-var enterList: Bool = true
-var introFinish: Bool = false
+var enterList: Bool = true      //used for disabling the list's navigation links
+var introFinish: Bool = false   //used for checking if the intro animation has finished
 
 struct WelcomePage: View {
     @State var maskWidth: Double = 10000
@@ -73,12 +73,12 @@ struct WelcomePage: View {
                         .trim(from: circleF1,to: circleT1)
                         .stroke(Color.white,lineWidth: 20)
                         .frame(width: 350, height: 350)
-                        
+                    
                     Circle()
                         .trim(from: circleF2,to: circleT2)
                         .stroke(Color.white,lineWidth: 20)
                         .frame(width: 300, height: 300)
-
+                    
                     Circle()
                         .trim(from: circleF3,to: circleT3)
                         .stroke(Color.white,lineWidth: 20)
@@ -161,7 +161,7 @@ struct WelcomePage: View {
         }
         
         
-                
+        
     }
 }
 

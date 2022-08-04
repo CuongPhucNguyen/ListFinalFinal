@@ -1,13 +1,13 @@
 /*
-  RMIT University Vietnam
-  Course: COSC2659 iOS Development
-  Semester: 2022B
-  Assessment: Assignment 2
-  Author: Nguyen Phuc Cuong
-  ID: s381006
-  Created  date: 20/07/2022
-  Last modified: 03/08/2022
-  Acknowledgement:
+ RMIT University Vietnam
+ Course: COSC2659 iOS Development
+ Semester: 2022B
+ Assessment: Assignment 2
+ Author: Nguyen Phuc Cuong
+ ID: s381006
+ Created  date: 20/07/2022
+ Last modified: 03/08/2022
+ Acknowledgement:
 */
 
 
